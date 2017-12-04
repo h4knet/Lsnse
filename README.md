@@ -6,20 +6,26 @@ It basically list all files matching your search pattern and then display the fi
 
 Feel free to take a look at this little thing and share your ideas/improvements :)
 
+![screenshot](https://raw.githubusercontent.com/netro/lsnse/master/lsnse.png)
+
+
 # Installation
 This is a quick-and-dirty how to but you will get the idea :
 ```
-sudo wget -O /usr/bin/lsnse https://...
+sudo wget -O /usr/bin/lsnse https://raw.githubusercontent.com/netro/lsnse/master/lsnse
 sudo chmod 755 /usr/bin/lsnse
+sha256sum /usr/bin/lsnse
+
 ```
 You should check the commands you copy/paste to your terminal and you should check the signature of the file.
 There is no check for update feature so be aware this tool might be improved over the time.
-Here is the SHA256 signature of the file : 26afec45b7834ea95c48c4e901fd843c0661e2a3cc4028b78cdd1b27243d94ad
+Here is the SHA256 signature of the file : 4e5361d52ca15caab7279f46b88001e2f608649cb6a18f0d280af83fcfa6cc39
 
 # TODO List
- - Complete readme
-   - add screenshot
-   - add simple install commands
- - Script ideas / improvments
-   - (it's in the header of the script..)
- - Add the script...
+ - Manage no results
+ - Manage the ^ char for searches only begining with pattern
+ - Magage finding path of scripts folder
+ - Manage search through description only (i.e. CVE for http ASA) with new option
+
+
+   
