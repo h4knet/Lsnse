@@ -1,0 +1,33 @@
+#!/bin/bash
+# lsnse - Quick search for nmap NSE scripts
+#
+# V1.0 2017-07 - Net - Initial release
+# V1.1 2017-12 - Net - Public release
+
+# TODO
+#  - Manage no results
+#  - Manage the ^ char for searches only begining with pattern
+#  - Magage finding path of scripts folder
+#  - Manage search through description only (i.e. CVE for http ASA) with new option
+
+# Nmap NSE scripts path.
+path="/usr/share/nmap/scripts/"
+
+# Colors
+BLUE="\033[01;34m"
+BOLD="\033[01;01m"
+RESET="\033[00m"
+
+# Simple check
+if [ $# -eq 0 ] ; then
+        echo -e "lsnse V1.1 - Quick search for nmap NSE scripts\n\nUsage: lsnse <word>"
+        exit 1
+fi
+
+echo -e "${BLUE}[*]${RESET} Matching list:"
+ls -lah --color=auto $path | grep --color=always $1 | awk '{print "    " $9}'
+
+for file in $(find $path -name "*$1*" | sort) ; do
+        echo -e "\n${BLUE}[*]${RESET} Script ${BOLD}$file${RESET}"
+        echo -n "    " && sed -n '/\[\[/,/\]\]/{/\[\[/b;/\]\]/b;p}' $file | sed '/^$/q' | grep -v "^$"
+done
