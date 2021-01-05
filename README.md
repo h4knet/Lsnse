@@ -1,4 +1,4 @@
-# lsnse ![Github All Releases](https://img.shields.io/github/downloads/h4knet/lsnse/total)
+# lsnse [![Github All Releases](https://img.shields.io/github/downloads/h4knet/lsnse/total)](https://github.com/h4knet/lsnse/releases/latest/download/lsnse)
 Quick search for nmap NSE scripts
 
 I was a bit tired of searching for nmap NSE scripts so I made a small tool to help me doing this quicker.
