@@ -13,7 +13,7 @@ A quick how-to:
 sudo wget -O /usr/local/bin/lsnse https://github.com/h4knet/lsnse/releases/latest/download/lsnse
 sudo chmod 755 /usr/local/bin/lsnse
 ```
-There is no check for update feature so be aware this tool might be improved over the time.
+There is no check for update feature so be aware this tool might be improved over time.
 
 ### Usage examples
 ```
